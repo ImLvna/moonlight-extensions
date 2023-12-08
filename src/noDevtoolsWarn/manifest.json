@@ -1,0 +1,9 @@
+{
+  "id": "noDevtoolsWarn",
+  "meta": {
+    "name": "No Devtools Warn",
+    "tagline": "Disables discord spamming the console",
+    "authors": ["Luny <3"],
+    "tags": ["development"]
+  }
+}
