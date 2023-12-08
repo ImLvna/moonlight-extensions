@@ -1,9 +1,9 @@
 {
-  "id": "autoConsole",
+  "id": "betterRoleDot",
   "version": "1.0.0",
   "meta": {
-    "name": "Auto Console",
-    "description": "Opens console on load",
+    "name": "Better Role Dot",
+    "description": "Shows both styles of role",
     "authors": ["Luny <3"],
     "source": "https://github.com/imlvna/moonlight-extensions"
   }
