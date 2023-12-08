@@ -5,6 +5,7 @@
     "name": "Better Role Dot",
     "description": "Shows both styles of role",
     "authors": ["Luny <3"],
-    "source": "https://github.com/imlvna/moonlight-extensions"
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["appearance"]
   }
 }
