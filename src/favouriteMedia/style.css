@@ -1,4 +1,4 @@
 /* stylelint-disable selector-class-pattern */
-.originalLink__94d5d:not([href$="gif"]) + div + div > .gifTag__9db5a {
+[class*="originalLink_"]:not([href$="gif"]) + div + div > [class*="gifTag_"] {
     display: none;
 }
