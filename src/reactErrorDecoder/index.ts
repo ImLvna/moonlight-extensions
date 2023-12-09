@@ -1,11 +1,5 @@
 import type { ExtensionWebpackModule, Patch } from "@moonlight-mod/types";
-
-let ERROR_CODES: Record<number, string> | undefined;
-fetch(
-  "https://raw.githubusercontent.com/facebook/react/17.0.2/scripts/error-codes/codes.json"
-)
-  .then((res) => res.json())
-  .then((res) => (ERROR_CODES = res));
+import ERROR_CODES from "./codes.json";
 
 export const webpackModules: Record<string, ExtensionWebpackModule> = {
   decode: {
@@ -13,7 +7,7 @@ export const webpackModules: Record<string, ExtensionWebpackModule> = {
     run: (module, exports, require) => {
       module.exports.default = (code: number, ...args: any) => {
         let index = 0;
-        return ERROR_CODES?.[code]?.replace(/%s/g, () => {
+        return ERROR_CODES[code]?.replace(/%s/g, () => {
           const arg = args[index];
           index++;
           return arg;
