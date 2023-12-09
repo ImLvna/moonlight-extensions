@@ -1,0 +1,11 @@
+{
+  "id": "noF1",
+  "version": "1.0.0",
+  "meta": {
+    "name": "No F1",
+    "description": "Removes Discord's F1 keybind to open the help page",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol"]
+  }
+}
