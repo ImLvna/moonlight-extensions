@@ -1,0 +1,11 @@
+{
+  "id": "reactErrorDecoder",
+  "version": "1.0.0",
+  "meta": {
+    "name": "React Error Decoder",
+    "description": "Replaces React errors with a more readable version.",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["development", "qol"]
+  }
+}
