@@ -1,0 +1,11 @@
+{
+  "id": "favouriteMedia",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Favourite Media",
+    "description": "Allows you to favourite images and videos",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol"]
+  }
+}
