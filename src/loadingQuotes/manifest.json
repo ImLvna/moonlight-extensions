@@ -1,0 +1,19 @@
+{
+  "id": "loadingQuotes",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Loading Quotes",
+    "description": "Allows you to use your own loading quotes",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["appearance"]
+  },
+  "settings": {
+    "quotes": {
+      "displayName": "Quotes",
+      "description": "A list of your own quotes",
+      "type": "list",
+      "default": []
+    }
+  }
+}
