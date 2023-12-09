@@ -71,23 +71,16 @@ function makeConfig(ext, name) {
     name: "cssPlugin",
     setup(build) {
       build.onLoad({ filter: /\.css$/ }, async (args) => {
-        let contents = await fs.promises.readFile(args.path, "utf8");
-        contents = contents.replace(
-          /@import\s+["'](.+?)["'];/g,
-          (match, path) => {
-            return fs.readFileSync(
-              require.resolve(path, {
-                paths: [args.resolveDir]
-              }),
-              "utf8"
-            );
-          }
-        );
-        contents = `
-          module.exports.default = ${JSON.stringify(contents)};`;
         return {
-          contents: contents,
-          loader: "js"
+          contents: await esbuild.transform(
+            await fs.promises.readFile(args.path, "utf8"),
+            {
+              loader: "css",
+              minify: prod,
+              sourcemap: "inline"
+            }
+          ).code,
+          loader: "text"
         };
       });
     }
