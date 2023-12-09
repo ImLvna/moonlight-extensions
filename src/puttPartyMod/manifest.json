@@ -1,0 +1,11 @@
+{
+  "id": "puttPartyMod",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Putt Party Mod",
+    "description": "lmao",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol"]
+  }
+}
