@@ -1,0 +1,11 @@
+.smyn {
+  color: var(--text-muted);
+}
+
+.smyn::before {
+  content: "(";
+}
+
+.smyn::after {
+  content: ")";
+}

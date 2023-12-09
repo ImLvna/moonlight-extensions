@@ -1,0 +1,25 @@
+{
+  "id": "showMeYourName",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Show Me Your Name",
+    "description": "Adds the username or display name after nicknames",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["appearance"]
+  },
+  "settings": {
+    "displayName": {
+      "name": "Use Dispay Name",
+      "type": "boolean",
+      "default": false
+    },
+    "mode": {
+      "name": "Appearance",
+      "description": "How to display the name",
+      "type": "select",
+      "options": ["Nickname, Username", "Username, Nickname"],
+      "default": "Nickname, Username"
+    }
+  }
+}

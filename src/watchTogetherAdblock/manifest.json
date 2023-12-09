@@ -1,0 +1,11 @@
+{
+  "id": "watchTogetherAdblock",
+  "version": "1.0.0",
+  "meta": {
+    "name": "[NOT WORKING] Watch Together Adblock",
+    "description": "Removes ads from Watch Together",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol"]
+  }
+}

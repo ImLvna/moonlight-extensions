@@ -23,6 +23,9 @@ function makeConfig(ext, name) {
 
   if (entryPoints.length === 0) return null;
 
+  /**
+   * @type {import('esbuild').Plugin}
+   */
   const wpImportPlugin = {
     name: "webpackImports",
     setup(build) {
@@ -36,20 +39,59 @@ function makeConfig(ext, name) {
     }
   };
 
+  /**
+   * @type {import('esbuild').Plugin}
+   */
   const timeFormatter = new Intl.DateTimeFormat(undefined, {
     hour: "numeric",
     minute: "numeric",
     second: "numeric",
     hour12: false
   });
+  /**
+   * @type {import('esbuild').Plugin}
+   */
   const buildLogPlugin = {
     name: "buildLog",
     setup(build) {
       build.onEnd(() => {
-        console.log(`[${timeFormatter.format(new Date())}] [${ext}/${name}] build finished`);
+        console.log(
+          `[${timeFormatter.format(
+            new Date()
+          )}] [${ext}/${name}] build finished`
+        );
       });
     }
-  }
+  };
+
+  /**
+   * @type {import('esbuild').Plugin}
+   */
+  const cssPlugin = {
+    name: "cssPlugin",
+    setup(build) {
+      build.onLoad({ filter: /\.css$/ }, async (args) => {
+        let contents = await fs.promises.readFile(args.path, "utf8");
+        contents = contents.replace(
+          /@import\s+["'](.+?)["'];/g,
+          (match, path) => {
+            return fs.readFileSync(
+              require.resolve(path, {
+                paths: [args.resolveDir]
+              }),
+              "utf8"
+            );
+          }
+        );
+        contents = `
+          module.exports.default = ${JSON.stringify(contents)};`;
+        return {
+          contents: contents,
+          loader: "js"
+        };
+      });
+    }
+  };
 
   return {
     entryPoints,
@@ -63,14 +105,7 @@ function makeConfig(ext, name) {
     minify: prod,
     sourcemap: "inline",
 
-    external: [
-      "electron",
-      "fs",
-      "path",
-      "module",
-      "events",
-      "original-fs"
-    ],
+    external: ["electron", "fs", "path", "module", "events", "original-fs"],
 
     plugins: [
       copyStaticFiles({
@@ -78,7 +113,8 @@ function makeConfig(ext, name) {
         dest: `./dist/${ext}/manifest.json`
       }),
       wpImportPlugin,
-      buildLogPlugin
+      buildLogPlugin,
+      cssPlugin
     ]
   };
 }
