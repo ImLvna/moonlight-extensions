@@ -1,0 +1,11 @@
+{
+  "id": "noDmCallIdle",
+  "version": "1.0.0",
+  "meta": {
+    "name": "No DM Call Idle",
+    "description": "Stops clyde from disconnecting you from a call when you're alone",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["voice", "qol"]
+  }
+}
