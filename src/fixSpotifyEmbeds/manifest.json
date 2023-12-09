@@ -1,0 +1,19 @@
+{
+  "id": "fixSpotifyEmbeds",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Fix Spotify Embeds",
+    "description": "Turns down the volume on Spotify embeds",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol"]
+  },
+  "settings": {
+    "volume": {
+      "displayName": "Volume",
+      "description": "Spotify's volume",
+      "type": "number",
+      "default": 10
+    }
+  }
+}
