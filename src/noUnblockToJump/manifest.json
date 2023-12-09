@@ -1,0 +1,11 @@
+{
+  "id": "noUnblockToJump",
+  "version": "1.0.0",
+  "meta": {
+    "name": "No Unblock To Jump",
+    "description": "Allows you to jump to blocked messages",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol"]
+  }
+}
