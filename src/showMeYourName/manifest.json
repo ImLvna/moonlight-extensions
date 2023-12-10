@@ -8,6 +8,7 @@
     "source": "https://github.com/imlvna/moonlight-extensions",
     "tags": ["appearance"]
   },
+  "dependencies": ["common"],
   "settings": {
     "displayName": {
       "name": "Use Dispay Name",

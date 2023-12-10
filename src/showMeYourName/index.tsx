@@ -1,20 +1,32 @@
 import { ExtensionWebpackModule, Patch } from "@moonlight-mod/types";
 import { Message, User } from "discord-types/general";
-import style from "./style.css";
-import React from "@moonlight-mod/wp/common_react";
-
-// BLOCKING: Wait for kasi to impliment style loading
-export const styles = [style];
 
 enum Mode {
   USER_NICK = "Username, Nickname",
   NICK_USER = "Nickname, Username"
 }
 
+export const styles = [
+  `.smyn {
+    color: var(--text-muted);
+  }
+  
+  .smyn::before {
+    content: "(";
+  }
+  
+  .smyn::after {
+    content: ")";
+  }
+  `
+];
+
 export const webpackModules: Record<string, ExtensionWebpackModule> = {
   render: {
+    dependencies: [{ ext: "common", id: "react" }],
     entrypoint: true,
     run: (module, exports, require) => {
+      const React = require("common_react");
       module.exports.default = ({
         author,
         message,
