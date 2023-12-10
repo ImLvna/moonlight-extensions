@@ -1,0 +1,11 @@
+{
+  "id": "fixImageQuality",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Fix Image Quality",
+    "description": "Downloads images at a higher resolution, making it sharper",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol", "appearance"]
+  }
+}

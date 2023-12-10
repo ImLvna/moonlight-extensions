@@ -1,0 +1,18 @@
+{
+  "id": "chromeExtensions",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Chrome Extensions",
+    "description": "Loads chrome extensions from a folder",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["developer"]
+  },
+  "settings": {
+    "path": {
+      "displayName": "Path",
+      "description": "Path to the folder containing the extensions",
+      "type": "string"
+    }
+  }
+}
