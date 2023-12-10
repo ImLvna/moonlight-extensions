@@ -1,0 +1,19 @@
+{
+  "id": "charCount",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Char Count",
+    "description": "Shows the number of characters in the message box.",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["appearance"]
+  },
+  "settings": {
+    "style": {
+      "displayName": "Style",
+      "type": "select",
+      "options": ["Float", "Locked to bottom"],
+      "default": "Float"
+    }
+  }
+}
