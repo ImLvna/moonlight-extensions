@@ -4,7 +4,8 @@ export const patches: Patch[] = [
   {
     find: "handleImageLoad=",
     replace: {
-        match: /(?<=getSrc\(\i\){.+?format:)\i/,
-        replacement: "null"
+      match: /(?<=getSrc\(\i\){.+?format:)\i/,
+      replacement: "null"
     }
-}
+  }
+];
