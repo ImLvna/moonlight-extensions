@@ -4,15 +4,21 @@
   "scripts": {
     "build": "node build.mjs",
     "watch": "node build.mjs --watch",
-    "repo": "node repo.mjs"
+    "repo": "node repo.mjs",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@electron/asar": "^3.2.8",
     "@types/electron": "^1.6.10",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
     "discord-types": "^1.3.3",
     "electron": "^28.0.0",
     "esbuild": "^0.19.3",
-    "esbuild-copy-static-files": "^0.1.0"
+    "esbuild-copy-static-files": "^0.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.1"
   },
   "dependencies": {
     "@moonlight-mod/types": "^1.1.4"
