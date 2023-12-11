@@ -1,0 +1,11 @@
+{
+  "id": "nsfwGateBypass",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Nsfw Gate Bypass",
+    "description": "Allows underage / unverified users to view NSFW channels",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol"]
+  }
+}
