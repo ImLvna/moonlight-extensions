@@ -4,7 +4,9 @@ import ERROR_CODES from "./codes.json";
 export const webpackModules: Record<string, ExtensionWebpackModule> = {
   decode: {
     entrypoint: true,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     run: (module, exports, require) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       module.exports.default = (code: number, ...args: any) => {
         let index = 0;
         return ERROR_CODES[code]?.replace(/%s/g, () => {

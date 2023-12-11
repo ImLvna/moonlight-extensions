@@ -3,6 +3,7 @@ import type { ExtensionWebpackModule, Patch } from "@moonlight-mod/types";
 export const webpackModules: Record<string, ExtensionWebpackModule> = {
   quote: {
     entrypoint: true,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     run: (module, exports, require) => {
       module.exports.default = () => {
         const quotes = moonlight.getConfigOption<string[]>(

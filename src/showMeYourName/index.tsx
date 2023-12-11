@@ -50,6 +50,7 @@ export const webpackModules: Record<string, ExtensionWebpackModule> = {
             ) ??
             false
           )
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             username = (user as any).globalName || username;
 
           const { nick } = author;

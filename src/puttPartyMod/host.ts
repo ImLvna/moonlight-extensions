@@ -16,9 +16,11 @@ declare global {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyFunc = (...args: any[]) => any;
 
 interface originalFunc {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   original: (...args: any[]) => any;
 }
 
@@ -96,13 +98,13 @@ const entrypoint = async () => {
           }
           if (matched) {
             if (loglevel > 1) console.log("patching", patch.find);
-            function patchCode(replacement: PatchReplace) {
+            const patchCode = (replacement: PatchReplace) => {
               if (replacement.type === PatchReplaceType.Module) return;
               code = code.replace(
                 replacement.match,
                 replacement.replacement as string
               );
-            }
+            };
 
             if (Array.isArray(patch.replace)) {
               for (const replacement of patch.replace) {
@@ -129,6 +131,7 @@ const entrypoint = async () => {
       };
 
       const handleInstantiate: typeof window.System.instantiate &
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         originalFunc = async (name: string, fn: (...args: any[]) => any) => {
         if (loglevel > 1) console.log("instantiate", name, fn);
         const res = await handleInstantiate.original.call(
