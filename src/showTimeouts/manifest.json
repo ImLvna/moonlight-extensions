@@ -1,0 +1,11 @@
+{
+  "id": "showTimeouts",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Show Timeouts",
+    "description": "Shows timed out users in the chat",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["qol", "appearance"]
+  }
+}
