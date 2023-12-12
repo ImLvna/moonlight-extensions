@@ -8,5 +8,5 @@
     "source": "https://github.com/imlvna/moonlight-extensions",
     "tags": ["appearance"]
   },
-  "dependencies": ["common"]
+  "dependencies": ["common", "spacepack"]
 }
