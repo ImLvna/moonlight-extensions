@@ -1,24 +1,21 @@
 {
-  "id": "charCount",
+  "id": "wpmCount",
   "version": "1.0.0",
   "meta": {
-    "name": "Char Count",
-    "description": "Shows the number of characters in the message box.",
+    "name": "WPM Count",
+    "description": "Shows your WPM in the bottom right corner of the screen.",
     "authors": ["Luny <3"],
     "source": "https://github.com/imlvna/moonlight-extensions",
-    "tags": ["appearance"]
+    "tags": ["appearance"],
+    "dependencies": ["common", "spacepack"]
   },
-  "incompatible": ["wpmCount"],
+  "incompatible": ["charCount"],
   "settings": {
     "style": {
       "displayName": "Style",
       "type": "select",
       "options": ["Float", "Locked to bottom"],
       "default": "Float"
-    },
-    "maxChars": {
-      "displayName": "Show max characters",
-      "type": "boolean"
     }
   }
 }
