@@ -1,0 +1,11 @@
+{
+  "id": "patchHelper",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Patch Helper",
+    "description": "Visualizes patches",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["developer", "qol"]
+  }
+}

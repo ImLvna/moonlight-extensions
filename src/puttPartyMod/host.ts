@@ -16,11 +16,9 @@ declare global {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyFunc = (...args: any[]) => any;
 
 interface originalFunc {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   original: (...args: any[]) => any;
 }
 
@@ -131,7 +129,6 @@ const entrypoint = async () => {
       };
 
       const handleInstantiate: typeof window.System.instantiate &
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         originalFunc = async (name: string, fn: (...args: any[]) => any) => {
         if (loglevel > 1) console.log("instantiate", name, fn);
         const res = await handleInstantiate.original.call(

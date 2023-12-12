@@ -1,0 +1,12 @@
+{
+  "id": "typingIndicator",
+  "version": "1.0.0",
+  "meta": {
+    "name": "Typing Indicator",
+    "description": "Shows channels that are typing",
+    "authors": ["Luny <3"],
+    "source": "https://github.com/imlvna/moonlight-extensions",
+    "tags": ["appearance"]
+  },
+  "dependencies": ["common"]
+}
