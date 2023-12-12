@@ -9,12 +9,19 @@
     "tags": ["appearance"]
   },
   "incompatible": ["wpmCount"],
+  "dependencies": ["common", "spacepack"],
   "settings": {
     "style": {
       "displayName": "Style",
       "type": "select",
       "options": ["Float", "Locked to bottom"],
       "default": "Float"
+    },
+    "side": {
+      "displayName": "Side",
+      "type": "select",
+      "options": ["Left", "Right"],
+      "default": "Right"
     },
     "maxChars": {
       "displayName": "Show max characters",

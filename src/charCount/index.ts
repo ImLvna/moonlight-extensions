@@ -8,13 +8,20 @@ enum Style {
   Float = "Float",
   Lock = "Locked to bottom"
 }
+enum Side {
+  Left = "Left",
+  Right = "Right"
+}
 
 const style =
   moonlight.getConfigOption<Style>("charCount", "style") ?? Style.Float;
 
+const side = moonlight.getConfigOption<Side>("charCount", "side") ?? Side.Right;
+
 export const styles = [
   `[class*="characterCount_"] {
   ${style === Style.Float ? "top: -30px;" : "bottom: unset !important;"}
+  ${side === Side.Left ? "right: unset !important;" : ""}
 }`
 ];
 

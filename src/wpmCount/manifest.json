@@ -1,21 +1,38 @@
 {
   "id": "wpmCount",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "meta": {
     "name": "WPM Count",
     "description": "Shows your WPM in the bottom right corner of the screen.",
     "authors": ["Luny <3"],
     "source": "https://github.com/imlvna/moonlight-extensions",
-    "tags": ["appearance"],
-    "dependencies": ["common", "spacepack"]
+    "tags": ["appearance"]
   },
   "incompatible": ["charCount"],
+  "dependencies": ["common", "spacepack"],
   "settings": {
     "style": {
       "displayName": "Style",
       "type": "select",
       "options": ["Float", "Locked to bottom"],
       "default": "Float"
+    },
+    "side": {
+      "displayName": "Side",
+      "type": "select",
+      "options": ["Left", "Right"],
+      "default": "Right"
+    },
+    "refreshInterval": {
+      "displayName": "Refresh Interval",
+      "type": "number",
+      "default": 250
+    },
+    "type": {
+      "displayName": "Type",
+      "type": "select",
+      "options": ["WPM", "CPM", "CPS"],
+      "default": "WPM"
     }
   }
 }
