@@ -1,4 +1,8 @@
-import { Patch } from "@moonlight-mod/types";
+import {
+  ExtensionWebpackModule,
+  Patch,
+  PatchReplaceType
+} from "@moonlight-mod/types";
 
 enum Style {
   Float = "Float",
@@ -14,37 +18,25 @@ export const styles = [
 }`
 ];
 
+export const webpackModules: Record<string, ExtensionWebpackModule> = {
+  charCount: {
+    dependencies: [
+      { ext: "common", id: "react" },
+      { ext: "common", id: "components" },
+      { ext: "spacepack", id: "spacepack" }
+    ]
+  }
+};
+
 export const patches: Patch[] = [
   {
-    find: "psellLongMessages&&",
+    find: "upsellLongMessages&&",
     replace: [
       {
-        match: /((\i)=null!=(\i)\?\3:\i.*?\i=)\2-/,
-        replacement: "$1"
-      },
-      {
-        match: /null!=\i.upsellLongMessages&&!/,
-        replacement: "false && $&"
-      },
-      {
-        match: /null!=\i.upsellLongMessages&&\(/,
-        replacement: "false && $&"
-      },
-      {
-        match: /((\i\.MAX_MESSAGE_LENGTH).*\.error\]:\i)<0/,
-        replacement: "$1>$2"
-      },
-      {
-        match: /(\i=)\i>\i/,
-        replacement: "$1false"
-      },
-      {
-        match: /\i&&\i>=0\?/,
-        replacement: "false ?"
-      },
-      {
-        match: /return \i\?\((.*):null}}/,
-        replacement: "return ($1}}"
+        type: PatchReplaceType.Module,
+        replacement: () => (module, exports, require) => {
+          module.exports.default = require("charCount_charCount").default;
+        }
       }
     ]
   }

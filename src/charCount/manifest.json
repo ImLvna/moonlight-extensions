@@ -14,6 +14,10 @@
       "type": "select",
       "options": ["Float", "Locked to bottom"],
       "default": "Float"
+    },
+    "maxChars": {
+      "displayName": "Show max characters",
+      "type": "boolean"
     }
   }
 }
